@@ -36,8 +36,8 @@ int main(int argc, string argv[])
                printf("%c", ((((text[i] - 'a') + ((tolower(key[n++ % SumOfElementsKey]))-'a')%26) % 26) + 'a'));
         } 
         else
-           printf("%c", text[i]);
+        printf("%c", text[i]);
     }
     printf("\n");
-      return 0;
+    return 0;
 }
