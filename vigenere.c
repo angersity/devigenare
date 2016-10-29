@@ -4,6 +4,7 @@
 #include <string.h>
 int main(int argc, string argv[])
 {
+    //
     if (argc != 2)
     {
         printf("Try again.");
@@ -11,7 +12,7 @@ int main(int argc, string argv[])
     }
     string key = argv[1];
     long SumOfElementsKey = strlen(key);
-    for(int index = 0; index < SumOfElementsKey; index++) 
+    for(long index = 0; index < SumOfElementsKey; index++) 
     {
         if (!isalpha(key[index]))
         {
@@ -26,17 +27,17 @@ int main(int argc, string argv[])
         printf("Try again.");
         return 1;
     }
-    for (int i = 0, n = 0; i < strlen(text); i++) 
+    for (long index = 0, NumberOfElementKey = 0; index < strlen(text); index++) 
     {
-        if (isalpha(text[i])) 
+        if (isalpha(text[index])) 
         {
-            if (isupper(text[i]))
-               printf("%c", ((((text[i] - 'A') + ((toupper(key[n++ % SumOfElementsKey]))-'A')%26) % 26) + 'A'));
-            if (islower(text[i]))
-               printf("%c", ((((text[i] - 'a') + ((tolower(key[n++ % SumOfElementsKey]))-'a')%26) % 26) + 'a'));
+            if (isupper(text[index]))
+                printf("%c", ((((text[index] - 'A') + ((toupper(key[NumberOfElementKey++ % SumOfElementsKey]))-'A')%26) % 26) + 'A'));
+            else
+                printf("%c", ((((text[index] - 'a') + ((tolower(key[NumberOfElementKey++ % SumOfElementsKey]))-'a')%26) % 26) + 'a'));
         } 
         else
-        printf("%c", text[i]);
+           printf("%c", text[index]);
     }
     printf("\n");
     return 0;
