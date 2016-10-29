@@ -4,14 +4,14 @@
 #include <string.h>
 int main(int argc, string argv[])
 {
-if (argc != 2)
+    if (argc != 2)
     {
         printf("Try again.");
         return 1;
     }
     string key = argv[1];
-    long NumberOfElementsKey = strlen(key);
-    for(int index = 0; index < NumberOfElementsKey; index++) 
+    long SumOfElementsKey = strlen(key);
+    for(int index = 0; index < SumOfElementsKey; index++) 
     {
         if (!isalpha(key[index]))
         {
@@ -31,12 +31,12 @@ if (argc != 2)
         if (isalpha(text[i])) 
         {
             if (isupper(text[i]))
-            printf("%c", ((((text[i] - 'A') + ((toupper(key[n++ % NumberOfElementsKey]))-'A')%26) % 26) + 'A'));
+               printf("%c", ((((text[i] - 'A') + ((toupper(key[n++ % SumOfElementsKey]))-'A')%26) % 26) + 'A'));
             if (islower(text[i]))
-            printf("%c", ((((text[i] - 'a') + ((tolower(key[n++ % NumberOfElementsKey]))-'a')%26) % 26) + 'a'));
+               printf("%c", ((((text[i] - 'a') + ((tolower(key[n++ % SumOfElementsKey]))-'a')%26) % 26) + 'a'));
         } 
         else
-        printf("%c", text[i]);
+           printf("%c", text[i]);
     }
     printf("\n");
       return 0;
