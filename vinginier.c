@@ -10,7 +10,7 @@ if (argc != 2)
         return 1;
     }
     string key = argv[1];
-    unsigned long keyCount = strlen(key);
+    long keyCount = strlen(key);
     for(int k = 0; k < keyCount; k++) 
     {
         if (!isalpha(key[k]))
@@ -19,6 +19,7 @@ if (argc != 2)
             return 1;
         }
     }
+    printf("enter the text \n");
     string text = GetString();
     if(text == NULL) 
     {
