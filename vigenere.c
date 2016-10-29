@@ -10,10 +10,10 @@ if (argc != 2)
         return 1;
     }
     string key = argv[1];
-    long keyCount = strlen(key);
-    for(int k = 0; k < keyCount; k++) 
+    long NumberOfElementsKey = strlen(key);
+    for(int index = 0; index < NumberOfElementsKey; index++) 
     {
-        if (!isalpha(key[k]))
+        if (!isalpha(key[index]))
         {
             printf("Try again.");
             return 1;
@@ -31,9 +31,9 @@ if (argc != 2)
         if (isalpha(text[i])) 
         {
             if (isupper(text[i]))
-            printf("%c", ((((text[i] - 'A') + ((toupper(key[n++%keyCount]))-'A')%26) % 26) + 'A'));
+            printf("%c", ((((text[i] - 'A') + ((toupper(key[n++ % NumberOfElementsKey]))-'A')%26) % 26) + 'A'));
             if (islower(text[i]))
-            printf("%c", ((((text[i] - 'a') + ((tolower(key[n++%keyCount]))-'a')%26) % 26) + 'a'));
+            printf("%c", ((((text[i] - 'a') + ((tolower(key[n++ % NumberOfElementsKey]))-'a')%26) % 26) + 'a'));
         } 
         else
         printf("%c", text[i]);
